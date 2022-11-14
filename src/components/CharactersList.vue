@@ -20,7 +20,7 @@ export default {
 
 <template>
 
-    <div class="results">
+    <div class="results" v-if="store.characters !== null">
         <p>Found {{ store.characters.length }} characters </p>
     </div>
 

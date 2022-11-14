@@ -1,6 +1,7 @@
 <script>
 import SiteHeader from './components/SiteHeader.vue';
 import SiteMain from "./components/SiteMain.vue";
+import LoadingMessage from "./components/LoadingMessage.vue"
 
 import { store } from './store.js';
 import axios from 'axios'
@@ -9,11 +10,13 @@ export default {
   name: "App",
   components: {
     SiteHeader,
-    SiteMain
+    SiteMain,
+    LoadingMessage
   },
   data() {
     return {
       store,
+      defaultMessage: "La pagina sta caricando"
     }
   },
   methods: {
@@ -39,9 +42,22 @@ export default {
 
 <template>
 
-  <SiteHeader />
+  <div v-if="store.characters.length === 62">
 
-  <SiteMain />
+    <SiteHeader />
+
+    <SiteMain />
+
+  </div>
+
+  <div v-else>
+
+    <LoadingMessage />
+
+
+  </div>
+
+
 
 </template>
 
