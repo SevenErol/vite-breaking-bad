@@ -20,6 +20,10 @@ export default {
 
 <template>
 
+    <div class="results">
+        <p>Found {{ store.characters.length }} characters </p>
+    </div>
+
     <div class="row row-cols-5">
         <SingleCharacter :character="character" v-for="character in store.characters" />
     </div>
