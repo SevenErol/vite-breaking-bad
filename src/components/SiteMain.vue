@@ -17,11 +17,11 @@ export default {
     <main>
 
         <div class="container">
-            <label for="difficulty">Select categiory:</label>
+            <label for="difficulty">Select category:</label>
             <select name="categories" id="categories">
-                <option value="">Easy</option>
-                <option value="">Regular</option>
-                <option value="">Hard</option>
+                <option value="">Something</option>
+                <option value="">Something</option>
+                <option value="">Something</option>
             </select>
 
             <div class="characters">
