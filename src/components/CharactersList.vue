@@ -21,7 +21,7 @@ export default {
 <template>
 
     <div class="row-cols-5">
-        <SingleCharacter :characters="characters" v-for="character in store.characters" />
+        <SingleCharacter :character="character" v-for="character in store.characters" />
     </div>
 
 </template>

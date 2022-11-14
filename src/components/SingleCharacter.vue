@@ -12,9 +12,9 @@ export default {
 <template>
 
     <div class="col">
-        <img :src="character.src" :alt="character.name">
-        <h5>{{ character.name }}</h5>
-        <p>{{ character.info }}</p>
+        <img :src="character.img" :alt="character.name">
+        <h5>{{ character.category }}</h5>
+        <p>{{ character.status }}</p>
     </div>
 
 
