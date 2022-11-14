@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+.characters {
+    background-color: $light;
+    padding: 1rem;
+
+    .row-cols-5 {
+
+        .col {
+
+            display: flex;
+            align-items: stretch;
+
+            .card {
+                background-color: $primary;
+                text-align: center;
+                margin-bottom: 1rem;
+
+                img {
+                    max-width: 100%;
+                    padding: 1rem;
+                }
+
+                h3 {
+                    color: $light;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    color: $p_grey;
+                }
+
+                .status {
+                    padding-bottom: 1rem;
+                }
+            }
+
+        }
+
+
+
+    }
+}

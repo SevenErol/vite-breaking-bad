@@ -20,7 +20,7 @@ export default {
 
 <template>
 
-    <div class="row-cols-5">
+    <div class="row row-cols-5">
         <SingleCharacter :character="character" v-for="character in store.characters" />
     </div>
 

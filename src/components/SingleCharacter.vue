@@ -11,10 +11,17 @@ export default {
 
 <template>
 
-    <div class="col">
-        <img :src="character.img" :alt="character.name">
-        <h5>{{ character.category }}</h5>
-        <p>{{ character.status }}</p>
+    <div class="col gy-3">
+
+        <div class="card">
+
+            <img :src="character.img" :alt="character.name">
+            <h3>{{ character.name }}</h3>
+            <p>{{ character.category }}</p>
+            <p class="status">{{ character.status }}</p>
+
+        </div>
+
     </div>
 
 

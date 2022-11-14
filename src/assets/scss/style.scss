@@ -1,6 +1,7 @@
 @use "./partials/variables" as *;
 
 @use "./partials/header";
+@use "./partials/main";
 
 @use "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
@@ -13,8 +14,4 @@
 
 body {
   background-color: $primary;
-}
-
-img {
-  max-width: 100%;
 }
