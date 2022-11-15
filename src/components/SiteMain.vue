@@ -3,11 +3,13 @@ import { store } from '../store';
 import axios from 'axios'
 
 import CharactersList from "./CharactersList.vue"
+import SelectionFilter from "./SelectionFilter.vue";
 
 export default {
     name: "SiteMain",
     components: {
-        CharactersList
+        CharactersList,
+        SelectionFilter
     },
     data() {
         return {
@@ -23,8 +25,6 @@ export default {
                 .then(response => {
                     this.store.characters = response.data
                 })
-
-            console.log("qui")
         }
     }
 }
@@ -38,17 +38,7 @@ export default {
 
         <div class="container">
 
-            <span class="filter">
-
-                <label for="difficulty">Select category:</label>
-                <select name="categories" id="categories" v-model="store.selected" @change="searchCharacter()">
-                    <option :value="store.firstOption">Breaking Bad</option>
-                    <option :value="store.secondOption">Better call Saul</option>
-                </select>
-
-            </span>
-
-
+            <SelectionFilter @searchCharacter="searchCharacter()" />
             <div class=" characters">
                 <CharactersList />
             </div>
