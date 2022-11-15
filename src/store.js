@@ -5,7 +5,7 @@ export const store = reactive({
     characters: [],
     error: null,
     defaultMessage: "Attendere, La pagina sta caricando...",
-    loading: true,
+    loading: false,
     selected: "categories",
     firstOption: "Breaking Bad",
     secondOption: "Better Call Saul"

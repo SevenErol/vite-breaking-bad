@@ -22,8 +22,8 @@ export default {
     callApi(url) {
       axios.get(url)
         .then(response => {
-          console.log(response);
           this.store.characters = response.data
+          this.store.loading = true
         })
         .catch(err => {
           console.error(err.message);
@@ -33,8 +33,7 @@ export default {
   },
   mounted() {
     this.callApi(this.store.API_URL)
-    this.store.loading = false
-    console.log(this.store)
+
   }
 }
 
@@ -42,7 +41,7 @@ export default {
 
 <template>
 
-  <div v-if="store.loading === false">
+  <div v-if="store.loading === true">
 
     <SiteHeader />
 
