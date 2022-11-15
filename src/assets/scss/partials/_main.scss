@@ -1,5 +1,18 @@
 @use "variables" as *;
 
+.filter {
+    background-color: $light;
+    padding: 0.5rem;
+
+    label {
+        margin-right: 1rem;
+    }
+
+    #categories {
+        border: none;
+    }
+}
+
 .characters {
     background-color: $light;
     padding: 1rem;

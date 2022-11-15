@@ -15,8 +15,7 @@ export default {
   },
   data() {
     return {
-      store,
-      defaultMessage: "Attendere, La pagina sta caricando..."
+      store
     }
   },
   methods: {
@@ -52,7 +51,7 @@ export default {
 
   <div v-else>
 
-    <LoadingMessage :defaultMessage="defaultMessage" />
+    <LoadingMessage :defaultMessage="store.defaultMessage" />
 
 
   </div>
