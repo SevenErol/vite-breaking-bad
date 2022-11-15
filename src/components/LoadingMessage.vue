@@ -1,7 +1,10 @@
 <script>
 
 export default {
-    name: "LoadingMessage"
+    name: "LoadingMessage",
+    props: {
+        defaultMessage: String
+    }
 }
 
 </script>
@@ -9,7 +12,7 @@ export default {
 <template>
 
     <div class="center_screen">
-        <h1>Attendere, la pagina sta caricando...</h1>
+        <h1>{{ defaultMessage }}</h1>
     </div>
 
 
