@@ -33,6 +33,7 @@ export default {
   },
   mounted() {
     this.callApi(this.store.API_URL)
+    this.store.loading = false
     console.log(this.store)
   }
 }
@@ -41,7 +42,7 @@ export default {
 
 <template>
 
-  <div v-if="store.characters.length === 62">
+  <div v-if="store.loading === false">
 
     <SiteHeader />
 
